@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WIRE</title>
+  <meta name="description" content="WIRE — медиа-агентство о музыке, технологиях и визуальной культуре.">
+  <meta property="og:title" content="WIRE">
+  <meta property="og:description" content="WIRE — медиа-агентство о музыке, технологиях и визуальной культуре.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --t-text-font: 'Inter', Arial, Helvetica, sans-serif;
+      --t-headline-font: 'Inter', Arial, Helvetica, sans-serif;
+    }
+    html, body { margin: 0; padding: 0; background: #000; }
+  </style>
+</head>
+<body>
+<section class="vb-k3d" data-section-name="Логотип и меню" data-vibeblock-unique-section="yes" aria-label="Логотип и меню" style="padding-bottom: 0px;">
+  <style>
+    .vb-k3d,
+    .vb-k3d * { box-sizing: border-box; }
+    .vb-k3d input,
+    .vb-k3d textarea,
+    .vb-k3d select { font: inherit; }
+
+    .vb-k3d {
+      --vb-k3d-ink: #ffffff;
+      --vb-k3d-ink-soft: rgba(255, 255, 255, 0.66);
+      --vb-k3d-ink-faint: rgba(255, 255, 255, 0.22);
+      --vb-k3d-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: clamp(40px, 8vh, 88px) clamp(20px, 6vw, 64px);
+      background-color: #000000;
+      font-family: var(--t-text-font);
+      color: var(--vb-k3d-ink);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .vb-k3d__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 940px;
+      text-align: center;
+    }
+
+    /* ---------- Lockup ---------- */
+
+    .vb-k3d__brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .vb-k3d__mark {
+      display: block;
+      width: clamp(160px, 34vw, 300px);
+      height: auto;
+      overflow: visible;
+      animation: vb-k3d-markIn 1.15s var(--vb-k3d-ease) both;
+    }
+
+    .vb-k3d__frame {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 1.6;
+      vector-effect: non-scaling-stroke;
+      opacity: 0.55;
+      stroke-dasharray: 256;
+      stroke-dashoffset: 256;
+      animation: vb-k3d-draw 1.4s var(--vb-k3d-ease) both;
+    }
+
+    .vb-k3d__frame--turn {
+      transform-box: fill-box;
+      transform-origin: 50% 50%;
+      transform: rotate(45deg);
+      animation:
+        vb-k3d-draw 1.4s var(--vb-k3d-ease) 0.14s both,
+        vb-k3d-turnIn 1.2s var(--vb-k3d-ease) 0.14s both;
+    }
+
+    .vb-k3d__core {
+      fill: #ffffff;
+      transform-box: fill-box;
+      transform-origin: 50% 50%;
+      animation: vb-k3d-coreIn 0.9s var(--vb-k3d-ease) 0.5s both;
+    }
+
+    /* ---------- Navigation ---------- */
+
+    .vb-k3d__nav {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: center;
+      gap: clamp(8px, 2vw, 20px);
+      width: 100%;
+      margin-top: clamp(36px, 6vw, 56px);
+    }
+
+    .vb-k3d__link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      padding: 10px clamp(4px, 1.4vw, 14px);
+      font-family: "Inter", var(--t-text-font);
+      font-size: clamp(12px, 1.1vw, 13px);
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      color: var(--vb-k3d-ink);
+      transition: color 0.4s var(--vb-k3d-ease);
+      animation: vb-k3d-rise 0.7s var(--vb-k3d-ease) both;
+    }
+
+    .vb-k3d__link:nth-child(1) { animation-delay: 0.72s; }
+    .vb-k3d__link:nth-child(2) { animation-delay: 0.8s; }
+    .vb-k3d__link:nth-child(3) { animation-delay: 0.88s; }
+    .vb-k3d__link:nth-child(4) { animation-delay: 0.96s; }
+
+    .vb-k3d__link-text {
+      position: relative;
+      display: block;
+    }
+
+    .vb-k3d__link-text::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -7px;
+      height: 1px;
+      background-color: var(--vb-k3d-ink);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.5s var(--vb-k3d-ease);
+    }
+
+    .vb-k3d__link:hover,
+    .vb-k3d__link:focus-visible {
+      color: var(--vb-k3d-ink);
+      outline: none;
+    }
+
+    .vb-k3d__link:hover .vb-k3d__link-text::after,
+    .vb-k3d__link:focus-visible .vb-k3d__link-text::after {
+      transform: scaleX(1);
+    }
+
+    .vb-k3d__link:focus-visible {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+      border-radius: 2px;
+    }
+
+    /* ---------- Motion ---------- */
+
+    @keyframes vb-k3d-markIn {
+      from { opacity: 0; transform: scale(0.86); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes vb-k3d-draw {
+      from { stroke-dashoffset: 256; }
+      to   { stroke-dashoffset: 0; }
+    }
+
+    @keyframes vb-k3d-turnIn {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(45deg); }
+    }
+
+    @keyframes vb-k3d-coreIn {
+      from { opacity: 0; transform: scale(0.2); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes vb-k3d-rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- Responsive ---------- */
+
+    @media (max-width: 760px) {
+      .vb-k3d__nav {
+        grid-template-columns: repeat(2, auto);
+        column-gap: clamp(14px, 6vw, 34px);
+        row-gap: 6px;
+      }
+      .vb-k3d__link { font-size: 12px; padding: 9px 6px; }
+    }
+
+    @media (max-width: 360px) {
+      .vb-k3d__nav { grid-template-columns: 1fr; }
+    }
+
+    @media (max-height: 560px) and (min-width: 761px) {
+      .vb-k3d { min-height: auto; padding-top: 56px; padding-bottom: 56px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .vb-k3d__mark,
+      .vb-k3d__frame,
+      .vb-k3d__frame--turn,
+      .vb-k3d__core,
+      .vb-k3d__link {
+        animation: none !important;
+        opacity: 1 !important;
+        stroke-dashoffset: 0 !important;
+        transform: none !important;
+      }
+      .vb-k3d__frame--turn { transform: rotate(45deg) !important; }
+      .vb-k3d__link-text::after { transition: none; }
+    }
+  </style>
+
+  <div class="vb-k3d__inner">
+    <div class="vb-k3d__brand">
+      <div class="vb-k3d__mark" role="img" style="display: inline-block; width: 350px; height: 350px; background-image: url(&quot;/img/wire-logo-white.svg&quot;); background-repeat: no-repeat; background-position: center center; background-size: contain;"></div>
+    </div>
+
+    <nav class="vb-k3d__nav" aria-label="Основная навигация">
+      <a class="vb-k3d__link" href="/vinyl"><span class="vb-k3d__link-text">ВИНИЛ</span></a>
+      <a class="vb-k3d__link" href="/logo"><span class="vb-k3d__link-text">ЛОГО</span></a>
+      <a class="vb-k3d__link" href="/digital"><span class="vb-k3d__link-text">ДИДЖИТАЛ</span></a>
+      <a class="vb-k3d__link" href="/textme"><span class="vb-k3d__link-text">Контакты</span></a>
+    </nav>
+  </div>
+</section><style data-vb-overrides="true">
+.vb-k3d__nav {
+    color: #faf7f7;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    transform: rotate(0deg);
+}
+
+.vb-k3d__link {
+    font-weight: 600;
+}
+
+@media (max-width: 360px) {
+    .vb-k3d__mark {
+        width: 350px;
+        height: 350px;
+    }
+}
+</style>
+</body>
+</html>

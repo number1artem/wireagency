@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена — WIRE</title>
+  <meta name="description" content="Страница не найдена.">
+  <meta property="og:title" content="Страница не найдена — WIRE">
+  <meta property="og:description" content="Страница не найдена.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --t-text-font: 'Inter', Arial, Helvetica, sans-serif;
+      --t-headline-font: 'Inter', Arial, Helvetica, sans-serif;
+    }
+    html, body { margin: 0; padding: 0; background: #000; }
+  </style>
+</head>
+<body>
+<section class="vb-k7m" id="vb-k7m" data-vibeblock-unique-section="yes" data-section-name="Страница ожидания" aria-label="Страница ожидания">
+  <div class="vb-k7m__noise" aria-hidden="true"></div>
+  <div class="vb-k7m__vignette" aria-hidden="true"></div>
+
+  <div class="vb-k7m__container">
+    <div class="vb-k7m__date" aria-hidden="true"><span class="vb-k7m__date-text">УПС<span class="vb-k7m__date-sep"></span>...</span></div>
+
+    <h1 class="vb-k7m__title"><span class="vb-k7m__title-row">КАЖЕТСЯ</span>
+<span class="vb-k7m__title-row vb-k7m__title-row--accent">ЗДЕСЬ ПУСТО</span></h1>
+
+    <p class="vb-k7m__subtitle">... НО МОЖЕТ СКОРО?</p>
+  </div>
+
+  </section>
+
+<style>
+.vb-k7m,
+.vb-k7m * { box-sizing: border-box; }
+.vb-k7m input,
+.vb-k7m textarea,
+.vb-k7m select { font: inherit; }
+
+.vb-k7m {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  background: #000;
+  color: #f5f5f5;
+  font-family: var(--t-text-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 80px) clamp(20px, 5vw, 60px);
+  isolation: isolate;
+}
+
+/* Subtle vignette to add depth without breaking the pure black */
+.vb-k7m__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.55) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Faint film grain using inline SVG */
+.vb-k7m__noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.vb-k7m__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(28px, 5vh, 56px);
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* === Date === */
+.vb-k7m__date {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 16px);
+  font-family: var(--t-headline-font);
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.78);
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: vb-k7m-rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.vb-k7m__date-line {
+  display: inline-block;
+  width: clamp(28px, 5vw, 56px);
+  height: 1px;
+  background: rgba(245, 245, 245, 0.5);
+}
+
+.vb-k7m__date-sep {
+  display: inline-block;
+  transform: translateY(-0.05em);
+  margin: 0 0.02em;
+  color: rgba(245, 245, 245, 0.55);
+}
+
+/* === Main title === */
+.vb-k7m__title {
+  margin: 0;
+  font-family: var(--t-headline-font);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 12.5vw, 9.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-wrap: balance;
+}
+
+.vb-k7m__title-row {
+  display: block;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: vb-k7m-rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.vb-k7m__title-row:nth-child(1) {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.78em;
+  letter-spacing: -0.025em;
+  animation-delay: 0.25s;
+}
+
+.vb-k7m__title-row--accent {
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.045em;
+  animation-delay: 0.45s;
+}
+
+/* === Subtitle === */
+.vb-k7m__subtitle {
+  margin: 0;
+  font-family: var(--t-headline-font);
+  font-size: clamp(0.95rem, 2vw, 1.35rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.55);
+  font-weight: 400;
+  position: relative;
+  padding-top: clamp(20px, 3vh, 32px);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: vb-k7m-rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+}
+
+.vb-k7m__subtitle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: clamp(20px, 3vh, 32px);
+  background: linear-gradient(to bottom,
+    rgba(245, 245, 245, 0) 0%,
+    rgba(245, 245, 245, 0.4) 100%);
+}
+
+/* === Animations === */
+@keyframes vb-k7m-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle breathing on the date */
+@keyframes vb-k7m-breath {
+  0%, 100% { opacity: 0.78; }
+  50%      { opacity: 1; }
+}
+
+.vb-k7m__date {
+  animation:
+    vb-k7m-rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards,
+    vb-k7m-breath 6s ease-in-out 1.5s infinite;
+}
+
+/* === Responsive refinements === */
+@media (max-width: 640px) {
+  .vb-k7m {
+    padding: 80px 20px 40px;
+  }
+  .vb-k7m__container {
+    gap: clamp(24px, 6vh, 36px);
+  }
+  .vb-k7m__title {
+    font-size: clamp(2.4rem, 14vw, 4.5rem);
+    line-height: 0.95;
+  }
+  .vb-k7m__title-row:nth-child(1) {
+    font-size: 0.72em;
+  }
+  .vb-k7m__date-line {
+    width: clamp(20px, 8vw, 40px);
+  }
+}
+
+@media (max-width: 380px) {
+  .vb-k7m__title {
+    font-size: 2.1rem;
+  }
+  .vb-k7m__subtitle {
+    letter-spacing: 0.14em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vb-k7m__container {
+    gap: 64px;
+  }
+}
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+  .vb-k7m__date,
+  .vb-k7m__title-row,
+  .vb-k7m__subtitle {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .vb-k7m__noise { display: none; }
+}
+</style>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.getElementById('vb-k7m');
+  if (!root) return;
+
+  // Subtle parallax on mouse move (desktop only) for the title
+  var title = root.querySelector('.vb-k7m__title');
+  var container = root.querySelector('.vb-k7m__container');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isCoarse = window.matchMedia('(pointer: coarse)').matches;
+
+  if (!reduceMotion && !isCoarse && title && container) {
+    var rafId = null;
+    var targetX = 0;
+    var targetY = 0;
+    var currentX = 0;
+    var currentY = 0;
+
+    function onMove(e) {
+      var rect = container.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      targetX = (e.clientX - cx) / rect.width;
+      targetY = (e.clientY - cy) / rect.height;
+      if (rafId === null) rafId = requestAnimationFrame(tick);
+    }
+
+    function tick() {
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
+      title.style.transform = 'translate(' + (currentX * 6).toFixed(2) + 'px, ' + (currentY * 4).toFixed(2) + 'px)';
+      if (Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001) {
+        rafId = requestAnimationFrame(tick);
+      } else {
+        rafId = null;
+      }
+    }
+
+    root.addEventListener('mousemove', onMove, { passive: true });
+    root.addEventListener('mouseleave', function () {
+      targetX = 0;
+      targetY = 0;
+      if (rafId === null) rafId = requestAnimationFrame(tick);
+    });
+  }
+})();
+</script>
+</body>
+</html>
